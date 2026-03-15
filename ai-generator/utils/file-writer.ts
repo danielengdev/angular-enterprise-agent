@@ -1,3 +1,7 @@
+// File Writer Utility
+// Author: Daniel Faustino <daniel.eng.dev@gmail.com>
+// Description: Handles file creation and writing with directory creation
+
 import fs from "fs"
 import path from "path"
 

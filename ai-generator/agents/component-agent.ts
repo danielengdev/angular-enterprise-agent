@@ -1,3 +1,7 @@
+// Angular Component Generator Agent
+// Author: Daniel Faustino <daniel.eng.dev@gmail.com>
+// Description: Generates Angular components using templates
+
 import { renderTemplate } from "../utils/template-engine"
 import { writeFile } from "../utils/file-writer"
 

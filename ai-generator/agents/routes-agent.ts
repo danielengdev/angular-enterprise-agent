@@ -1,3 +1,7 @@
+// Angular Routes Generator Agent
+// Author: Daniel Faustino <daniel.eng.dev@gmail.com>
+// Description: Generates Angular feature routes using templates
+
 import { renderTemplate } from "../utils/template-engine"
 import { writeFile } from "../utils/file-writer"
 

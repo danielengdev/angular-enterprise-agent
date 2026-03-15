@@ -1,3 +1,7 @@
+// Angular Feature Generator Agent
+// Author: Daniel Faustino <daniel.eng.dev@gmail.com>
+// Description: Generates complete Angular features including components, services, stores, and routes
+
 import path from "path"
 import { createComponent } from "./component-agent"
 import { createService } from "./service-agent"

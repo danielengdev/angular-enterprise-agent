@@ -1,3 +1,7 @@
+# Angular Enterprise AI Agent - Git Ignore
+# Author: Daniel Faustino <daniel.eng.dev@gmail.com>
+# This file specifies intentionally untracked files to ignore
+
 node_modules/
 dist/
 .env

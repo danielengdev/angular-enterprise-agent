@@ -97,4 +97,11 @@ npm run dev -- generate feature payments --root ../apps/your-project
 
 > ✅ After generation, the feature is ready to use. You can customize the generated code as needed.
 
+## Author
+
+**Daniel Faustino**  
+Email: [daniel.eng.dev@gmail.com](mailto:daniel.eng.dev@gmail.com)
+
+This project was created to streamline Angular development using AI-powered code generation.
+
 # angular-enterprise-agent

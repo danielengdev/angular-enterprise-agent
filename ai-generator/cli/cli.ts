@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 
+// Angular Enterprise AI Agent CLI
+// Author: Daniel Faustino <daniel.eng.dev@gmail.com>
+// Description: Command-line interface for generating Angular features using AI agents
+
 import path from "path"
 import { generateFeature } from "../agents/feature-agent"
 

@@ -1,3 +1,7 @@
+// Routes Editor AST Utility
+// Author: Daniel Faustino <daniel.eng.dev@gmail.com>
+// Description: Updates Angular app.routes.ts with new feature routes
+
 import fs from "fs"
 import path from "path"
 

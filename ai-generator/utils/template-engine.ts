@@ -1,3 +1,7 @@
+// Template Engine Utility
+// Author: Daniel Faustino <daniel.eng.dev@gmail.com>
+// Description: Renders templates with data substitution
+
 import fs from 'fs'
 
 export function renderTemplate(template:string,data:any){

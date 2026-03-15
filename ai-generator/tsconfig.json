@@ -1,3 +1,5 @@
+// TypeScript Configuration for Angular AI Generator
+// Author: Daniel Faustino <daniel.eng.dev@gmail.com>
 {
   "compilerOptions": {
     "target": "ES2020",
