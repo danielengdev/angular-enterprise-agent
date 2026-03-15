@@ -64,12 +64,18 @@ To create a new Angular project manually in the `apps/` directory:
 
 ## Generating a feature
 
-The AI agent can generate complete features for your Angular projects, including components, services, stores, and routing.
+The AI agent can generate complete features for your Angular projects, including components, services, stores, and routing. This follows **Spec Driven Development (SDD)** principles, where features are defined in specifications before code generation.
 
 ### Prerequisites
 
 - Angular project created in `apps/` with `src/app/app.routes.ts` (for routing updates).
 - AI generator built (`npm run build` in `ai-generator/`).
+
+### Feature Creation Process
+
+1. **Define the feature spec**: Create or update specifications in `specs/features/` (e.g., `payments.spec.md`).
+2. **Run the generator**: Use the CLI to generate the feature code.
+3. **Customize as needed**: Modify generated code to fit specific requirements.
 
 ### What gets generated
 
@@ -96,6 +102,44 @@ npm run dev -- generate feature payments --root ../apps/your-project
 ```
 
 > ✅ After generation, the feature is ready to use. You can customize the generated code as needed.
+
+## Feature Versioning and Evolution
+
+### Versioning Strategy
+
+Each feature follows semantic versioning in its specifications:
+- **Major**: Breaking changes to API or behavior
+- **Minor**: New functionality added
+- **Patch**: Bug fixes and improvements
+
+Version information is tracked in the feature's spec file (e.g., `specs/features/payments.spec.md`).
+
+### Evolving Features
+
+To evolve an existing feature following SDD:
+
+1. **Update the specification**: Modify the feature spec in `specs/features/` to include new requirements.
+2. **Version the changes**: Update the version number in the spec according to semantic versioning.
+3. **Regenerate the code**: Run the generator again to update the feature code.
+4. **Test and validate**: Ensure the changes work as expected.
+5. **Document changes**: Update any related documentation.
+
+### Adding New Features
+
+When adding new features:
+
+1. **Create feature spec**: Write a new `.spec.md` file in `specs/features/` describing the feature requirements.
+2. **Follow the template**: Use the existing specs as templates for consistency.
+3. **Generate the feature**: Use the CLI to create the initial code structure.
+4. **Iterate and refine**: Update specs and regenerate as needed during development.
+
+### Best Practices for Feature Evolution
+
+- Always update specs before code changes.
+- Use descriptive commit messages referencing the spec version.
+- Test generated code thoroughly before committing.
+- Keep specs in sync with the actual implementation.
+- Use the feature-driven architecture to maintain separation of concerns.
 
 ## Author
 
