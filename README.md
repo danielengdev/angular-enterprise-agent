@@ -38,7 +38,49 @@ cd ai-generator
 npm run build
 ```
 
+## Creating a new Angular project
+
+To create a new Angular project manually in the `apps/` directory:
+
+1. Navigate to the `apps/` folder:
+   ```bash
+   cd apps
+   ```
+
+2. Use Angular CLI to create a new project:
+   ```bash
+   ng new your-project-name --routing=true --style=scss --standalone
+   ```
+
+3. This will create `apps/your-project-name/` with its own `package.json`, `angular.json`, and standard Angular structure.
+
+4. Install dependencies for the new project:
+   ```bash
+   cd your-project-name
+   npm install
+   ```
+
+> **Note**: Each project in `apps/` is independent and should follow Angular best practices.
+
 ## Generating a feature
+
+The AI agent can generate complete features for your Angular projects, including components, services, stores, and routing.
+
+### Prerequisites
+
+- Angular project created in `apps/` with `src/app/app.routes.ts` (for routing updates).
+- AI generator built (`npm run build` in `ai-generator/`).
+
+### What gets generated
+
+For a feature named `payments`, the agent creates:
+- `src/app/features/payments/` directory
+- `payments-page.component.ts` (main page component)
+- `payments-form.component.ts` (form component)
+- `payments.service.ts` (service for API calls)
+- `payments.store.ts` (signals-based state management)
+- `payments.routes.ts` (feature routes)
+- Updates `src/app/app.routes.ts` to include the new feature route
 
 ### Using the built output
 
@@ -53,8 +95,6 @@ cd ai-generator
 npm run dev -- generate feature payments --root ../apps/your-project
 ```
 
-> ✅ The agent will generate:
-> - `src/app/features/<feature>` (components, store, service, routes)
-> - updates to `src/app/app.routes.ts` (if present)
+> ✅ After generation, the feature is ready to use. You can customize the generated code as needed.
 
 # angular-enterprise-agent

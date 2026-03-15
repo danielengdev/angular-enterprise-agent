@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.env
+coverage/
+.DS_Store
+*.log
+
+# AI Generator
+ai-generator/node_modules/
+ai-generator/dist/
+
+# Apps
+apps/*/node_modules/
+apps/*/dist/

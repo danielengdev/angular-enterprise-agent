@@ -1,0 +1,22 @@
+{
+  "name": "angular-enterprise-agent",
+  "version": "0.1.0",
+  "description": "AI-powered Angular code generator (agents + templates)",
+  "main": "dist/cli.js",
+  "bin": {
+    "angular-agent": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "npm run build && node dist/cli.js",
+    "dev": "ts-node ./cli/cli.ts"
+  },
+  "keywords": ["angular", "codegen", "agent", "ai"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
