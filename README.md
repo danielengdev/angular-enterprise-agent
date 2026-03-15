@@ -103,6 +103,67 @@ npm run dev -- generate feature payments --root ../apps/your-project
 
 > ✅ After generation, the feature is ready to use. You can customize the generated code as needed.
 
+### CLI Usage Examples
+
+Here are practical examples of how to use the CLI to generate features:
+
+#### Basic feature generation
+```bash
+# Generate a payments feature for a project in apps/my-app
+node ai-generator/dist/cli.js generate feature payments --root apps/my-app
+```
+
+#### Using ts-node for development
+```bash
+# From the ai-generator directory
+cd ai-generator
+npm run dev -- generate feature dashboard --root ../apps/admin-portal
+```
+
+#### Generating multiple features
+```bash
+# Generate auth feature
+node ai-generator/dist/cli.js generate feature auth --root apps/my-app
+
+# Generate user management feature
+node ai-generator/dist/cli.js generate feature users --root apps/my-app
+
+# Generate product catalog feature
+node ai-generator/dist/cli.js generate feature products --root apps/my-app
+```
+
+#### Full workflow example
+```bash
+# 1. Navigate to ai-generator and build
+cd ai-generator
+npm install
+npm run build
+
+# 2. Create a new Angular project
+cd ../apps
+ng new ecommerce-app --routing=true --style=scss --standalone
+cd ecommerce-app
+npm install
+
+# 3. Generate features
+cd ../../ai-generator
+node dist/cli.js generate feature auth --root ../apps/ecommerce-app
+node dist/cli.js generate feature products --root ../apps/ecommerce-app
+node dist/cli.js generate feature cart --root ../apps/ecommerce-app
+
+# 4. Start the application
+cd ../apps/ecommerce-app
+ng serve
+```
+
+#### Command structure
+```
+angular-agent generate feature <feature-name> [--root <project-path>]
+```
+
+- `feature-name`: The name of the feature to generate (e.g., payments, auth, dashboard)
+- `--root`: Path to the Angular project root (defaults to current directory if not specified)
+
 ## Feature Versioning and Evolution
 
 ### Versioning Strategy
